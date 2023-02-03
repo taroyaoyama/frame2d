@@ -20,7 +20,7 @@ omeg = np.sqrt(eig)
 
 # define damping matrix (stiffness-propotional)
 zeta = 0.02
-C = 2 * zeta / omeg * K
+C = 2 * zeta / min(omeg) * K
 
 # make MDOF object
 mdof = mdofpy.Mdof(M, C, K)
